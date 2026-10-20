@@ -1,0 +1,217 @@
+/*
+ * Portfolio Design Tokens — Phase 2
+ * Scope: foundation only. Existing pages do not import this file yet.
+ * Naming: --pt-{layer}-{role}-{variant}
+ */
+:root {
+  /* Primitive: color */
+  --pt-primitive-color-neutral-950: #08080f;
+  --pt-primitive-color-neutral-900: #0a0a0b;
+  --pt-primitive-color-neutral-850: #0d0b1a;
+  --pt-primitive-color-neutral-800: #111116;
+  --pt-primitive-color-neutral-750: #19191c;
+  --pt-primitive-color-neutral-700: #242429;
+  --pt-primitive-color-neutral-500: #62626b;
+  --pt-primitive-color-neutral-400: #898994;
+  --pt-primitive-color-neutral-300: #a6a6ad;
+  --pt-primitive-color-neutral-200: #b5b5bd;
+  --pt-primitive-color-neutral-100: #d6d3df;
+  --pt-primitive-color-neutral-050: #f5f4f7;
+  --pt-primitive-color-white: #ffffff;
+  --pt-primitive-color-purple-300: #d8b4fe;
+  --pt-primitive-color-purple-400: #c5b1ff;
+  --pt-primitive-color-purple-500: #b783ff;
+  --pt-primitive-color-purple-600: #a36aff;
+  --pt-primitive-color-blue-300: #a5b4fc;
+  --pt-primitive-color-pink-400: #f472b6;
+  --pt-primitive-color-green-300: #9fe8bd;
+  --pt-primitive-color-amber-400: #e6b45c;
+  --pt-primitive-color-red-400: #f16b78;
+
+  /* Primitive: typography */
+  --pt-primitive-font-family-sans: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --pt-primitive-font-family-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --pt-primitive-font-size-12: 12px;
+  /* Readability floor for visible UI copy. Icon glyphs and image content are
+     intentionally excluded by styles/readability.css. */
+  --pt-primitive-font-size-min: 14px;
+  --pt-primitive-font-size-14: 14px;
+  --pt-primitive-font-size-16: 16px;
+  --pt-primitive-font-size-18: 18px;
+  --pt-primitive-font-size-20: 20px;
+  --pt-primitive-font-size-24: 24px;
+  --pt-primitive-font-size-28: 28px;
+  --pt-primitive-font-size-36: 36px;
+  --pt-primitive-font-size-40: 40px;
+  --pt-primitive-font-size-32: 32px;
+  --pt-primitive-font-size-48: 48px;
+  --pt-primitive-font-size-display: clamp(56px, 6vw, 88px);
+  --pt-primitive-font-weight-regular: 400;
+  --pt-primitive-font-weight-medium: 500;
+  --pt-primitive-font-weight-semibold: 600;
+  --pt-primitive-font-weight-bold: 700;
+  --pt-primitive-line-height-body: 1.6;
+  --pt-primitive-line-height-heading: 1.2;
+  --pt-primitive-line-height-display: 1.05;
+  --pt-primitive-line-height-tight: 1.15;
+  --pt-primitive-line-height-relaxed: 1.65;
+  --pt-primitive-letter-spacing-tight: -0.055em;
+  --pt-primitive-letter-spacing-cjk: 0;
+  --pt-primitive-letter-spacing-latin-tight: -0.035em;
+  --pt-primitive-letter-spacing-label: 0.08em;
+
+  /* Primitive: spacing */
+  --pt-primitive-space-1: 4px;
+  --pt-primitive-space-2: 8px;
+  --pt-primitive-space-3: 12px;
+  --pt-primitive-space-4: 16px;
+  --pt-primitive-space-5: 20px;
+  --pt-primitive-space-6: 24px;
+  --pt-primitive-space-7: 32px;
+  --pt-primitive-space-8: 40px;
+  --pt-primitive-space-9: 48px;
+  --pt-primitive-space-10: 64px;
+  --pt-primitive-space-11: 80px;
+  --pt-primitive-space-12: 96px;
+
+  /* Primitive: radius, layout, motion */
+  --pt-primitive-radius-sm: 8px;
+  --pt-primitive-radius-md: 12px;
+  --pt-primitive-radius-lg: 16px;
+  --pt-primitive-radius-xl: 24px;
+  --pt-primitive-radius-pill: 999px;
+  --pt-primitive-container-standard: 1200px;
+  --pt-primitive-container-wide: 1440px;
+  --pt-primitive-container-narrow: 760px;
+  --pt-primitive-gutter-desktop: 64px;
+  --pt-primitive-gutter-tablet: 32px;
+  --pt-primitive-gutter-mobile: 20px;
+  --pt-primitive-motion-fast: 180ms;
+  --pt-primitive-motion-normal: 300ms;
+  --pt-primitive-motion-slow: 600ms;
+  --pt-primitive-motion-reveal: 700ms;
+  --pt-primitive-ease-standard: cubic-bezier(.2, .8, .2, 1);
+  --pt-primitive-ease-emphasized: cubic-bezier(.2, 1.35, .35, 1);
+
+  /* Semantic: roles */
+  --pt-semantic-bg-canvas: var(--pt-primitive-color-neutral-900);
+  --pt-semantic-bg-section: var(--pt-primitive-color-neutral-850);
+  --pt-semantic-bg-surface: var(--pt-primitive-color-neutral-800);
+  --pt-semantic-bg-elevated: var(--pt-primitive-color-neutral-700);
+  --pt-semantic-text-primary: var(--pt-primitive-color-neutral-050);
+  --pt-semantic-text-secondary: var(--pt-primitive-color-neutral-200);
+  --pt-semantic-text-tertiary: var(--pt-primitive-color-neutral-400);
+  --pt-semantic-text-disabled: var(--pt-primitive-color-neutral-500);
+  --pt-semantic-border-subtle: rgba(255,255,255,.10);
+  --pt-semantic-border-default: rgba(197,177,255,.22);
+  --pt-semantic-border-strong: rgba(197,177,255,.45);
+  --pt-semantic-accent-primary: var(--pt-primitive-color-purple-400);
+  --pt-semantic-accent-strong: var(--pt-primitive-color-purple-600);
+  --pt-semantic-accent-gradient: linear-gradient(100deg, var(--pt-primitive-color-blue-300), var(--pt-primitive-color-purple-300) 50%, var(--pt-primitive-color-pink-400));
+  --pt-semantic-section-space: clamp(88px, 10vw, 144px);
+  --pt-semantic-section-gap: clamp(40px, 6vw, 72px);
+
+  /* Semantic: typography roles. Chinese headings keep neutral tracking;
+     Latin-only display labels may opt into the tighter role explicitly. */
+  --pt-semantic-type-hero-title-size: clamp(56px, 6vw, 88px);
+  --pt-semantic-type-hero-title-weight: 700;
+  --pt-semantic-type-hero-title-line-height: 1.05;
+  --pt-semantic-type-hero-title-letter-spacing: var(--pt-primitive-letter-spacing-cjk);
+  --pt-semantic-type-section-title-size: clamp(34px, 4vw, 58px);
+  --pt-semantic-type-section-title-weight: 700;
+  --pt-semantic-type-section-title-line-height: 1.15;
+  --pt-semantic-type-section-title-letter-spacing: var(--pt-primitive-letter-spacing-cjk);
+  --pt-semantic-type-module-title-size: clamp(18px, 1.65vw, 24px);
+  --pt-semantic-type-module-title-weight: 650;
+  --pt-semantic-type-module-title-line-height: 1.25;
+  --pt-semantic-type-module-title-letter-spacing: var(--pt-primitive-letter-spacing-cjk);
+  --pt-semantic-type-body-large-size: clamp(17px, 1.25vw, 22px);
+  --pt-semantic-type-body-large-weight: 400;
+  --pt-semantic-type-body-large-line-height: 1.6;
+  --pt-semantic-type-body-large-letter-spacing: var(--pt-primitive-letter-spacing-cjk);
+  --pt-semantic-type-body-size: 16px;
+  --pt-semantic-type-body-weight: 400;
+  --pt-semantic-type-body-line-height: 1.65;
+  --pt-semantic-type-body-letter-spacing: var(--pt-primitive-letter-spacing-cjk);
+  --pt-semantic-type-caption-size: clamp(12px, .8vw, 14px);
+  --pt-semantic-type-caption-weight: 400;
+  --pt-semantic-type-caption-line-height: 1.55;
+  --pt-semantic-type-caption-letter-spacing: var(--pt-primitive-letter-spacing-cjk);
+  --pt-semantic-type-eyebrow-size: clamp(11px, .7vw, 14px);
+  --pt-semantic-type-eyebrow-weight: 500;
+  --pt-semantic-type-eyebrow-line-height: 1.3;
+  --pt-semantic-type-eyebrow-letter-spacing: var(--pt-primitive-letter-spacing-label);
+
+  /* Semantic: content rhythm */
+  --pt-semantic-space-title-description: clamp(20px, 1.82vw, 28px);
+  --pt-semantic-space-description-group: clamp(32px, 3.18vw, 52px);
+  --pt-semantic-space-group-item: clamp(14px, 2.24vw, 32px);
+  --pt-semantic-space-section-inset: clamp(24px, 4.17vw, 80px);
+
+  /* Contrast notes: primary/secondary roles are intended for the dark canvas.
+     #f5f4f7 on #0a0a0b ≈ 19.3:1; #b5b5bd on #0a0a0b ≈ 10.3:1;
+     #898994 on #0a0a0b ≈ 5.2:1 (AA for normal text). */
+  --pt-semantic-text-on-accent: var(--pt-primitive-color-neutral-950);
+
+  /* Component: reusable visual contracts */
+  --pt-component-nav-height: 58px;
+  --pt-component-nav-radius: var(--pt-primitive-radius-lg);
+  --pt-component-nav-bg: rgba(21,21,24,.64);
+  --pt-component-nav-border: var(--pt-semantic-border-subtle);
+  --pt-component-button-height: 44px;
+  --pt-component-button-radius: var(--pt-primitive-radius-md);
+  --pt-component-button-padding-inline: var(--pt-primitive-space-5);
+  --pt-component-button-font-size: var(--pt-primitive-font-size-14);
+  --pt-component-card-radius: var(--pt-primitive-radius-lg);
+  --pt-component-card-border: var(--pt-semantic-border-default);
+  --pt-component-card-padding: var(--pt-primitive-space-6);
+  --pt-component-card-bg: rgba(25,21,45,.72);
+  --pt-component-tag-radius: var(--pt-primitive-radius-pill);
+  --pt-component-phone-radius: 38px;
+  --pt-component-phone-screen-radius: 29px;
+  --pt-component-phone-border: #4d4d63;
+
+  /* Component: customer-operations pilot. Values preserve the existing
+     16:9 composition while allowing text roles to be centrally tuned. */
+  --pt-component-customer-kicker-size: 1.146cqw;
+  --pt-component-customer-heading-size: var(--pt-semantic-type-section-title-size);
+  --pt-component-customer-summary-size: clamp(14px, 1.042cqw, 20px);
+  --pt-component-customer-point-title-size: var(--pt-semantic-type-module-title-size);
+  --pt-component-customer-point-body-size: clamp(12px, .781cqw, 15px);
+  --pt-component-customer-card-title-size: var(--pt-semantic-type-module-title-size);
+  --pt-component-customer-card-body-size: clamp(12px, .885cqw, 17px);
+  --pt-component-customer-title-description-gap: 1.82cqw;
+  --pt-component-customer-description-group-gap: 3.18cqw;
+  --pt-component-customer-group-item-gap: 2.24cqw;
+
+  /* Component: sales-app-detail typography migration */
+  --pt-component-showcase-title-size: var(--pt-semantic-type-section-title-size);
+  --pt-component-showcase-intro-size: clamp(17px, 1.3vw, 23px);
+  --pt-component-showcase-card-title-size: var(--pt-semantic-type-module-title-size);
+  --pt-component-background-title-size: var(--pt-semantic-type-section-title-size);
+  --pt-component-shipment-title-size: var(--pt-semantic-type-section-title-size);
+  --pt-component-shipment-point-title-size: var(--pt-semantic-type-module-title-size);
+  --pt-component-ending-title-size: clamp(42px, 5vw, 82px);
+}
+
+@media (max-width: 1199px) {
+  :root { --pt-semantic-section-space: 96px; }
+}
+@media (max-width: 767px) {
+  :root {
+    --pt-semantic-section-space: 72px;
+    --pt-semantic-section-gap: 40px;
+    /* Pilot fallback: keep the 16:9 composition, but prevent cqw text from
+       collapsing below a readable size when the stage reaches phone widths. */
+    --pt-component-customer-heading-size: clamp(18px, 5.4cqw, 30px);
+    --pt-component-customer-summary-size: clamp(12px, 2.7cqw, 16px);
+    --pt-component-customer-point-title-size: var(--pt-semantic-type-module-title-size);
+    --pt-component-customer-point-body-size: clamp(10px, 2cqw, 13px);
+    --pt-component-customer-card-title-size: var(--pt-semantic-type-module-title-size);
+    --pt-component-customer-card-body-size: clamp(10px, 2.2cqw, 14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --pt-primitive-motion-fast: 1ms; --pt-primitive-motion-normal: 1ms; --pt-primitive-motion-slow: 1ms; --pt-primitive-motion-reveal: 1ms; }
+}
